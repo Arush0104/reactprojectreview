@@ -1,6 +1,6 @@
 import React from "react";
 import Topic from "../components/Topic";
-
+import PropTypes from "prop-types";
 function LLD({ questions, toggleDone }) {
   const lldQuestions = questions.slice(42);
 
@@ -16,5 +16,8 @@ function LLD({ questions, toggleDone }) {
     </div>
   );
 }
-
+LLD.propTypes = {
+  questions: PropTypes.array.isRequired,
+  toggleDone: PropTypes.func.isRequired
+};
 export default LLD;
