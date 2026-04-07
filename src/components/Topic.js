@@ -1,6 +1,6 @@
 import React from "react";
 import Question from "./Question";
-
+import PropTypes from "prop-types";
 function Topic({ name, questions, toggleDone }) {
   return (
     <div className="topic">
@@ -16,5 +16,9 @@ function Topic({ name, questions, toggleDone }) {
     </div>
   );
 }
-
+Topic.propTypes = {
+  name: PropTypes.string.isRequired,
+  questions: PropTypes.array.isRequired,
+  toggleDone: PropTypes.func.isRequired
+};
 export default Topic;
