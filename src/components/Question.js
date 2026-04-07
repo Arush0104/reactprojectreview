@@ -1,5 +1,5 @@
 import React from "react";
-
+import PropTypes from "prop-types";
 function Question({ title, done, toggle }) {
   return (
     <div className="question">
@@ -8,5 +8,9 @@ function Question({ title, done, toggle }) {
     </div>
   );
 }
-
+Question.propTypes = {
+  title: PropTypes.string.isRequired,
+  done: PropTypes.bool.isRequired,
+  toggle: PropTypes.func.isRequired
+};
 export default Question;
