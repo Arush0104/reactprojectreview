@@ -1,6 +1,6 @@
 import React from "react";
 import Topic from "../components/Topic";
-
+import PropTypes from "prop-types";
 function DSA({ questions, toggleDone }) {
   const topics = [
   "Arrays",
@@ -37,5 +37,8 @@ function DSA({ questions, toggleDone }) {
     </div>
   );
 }
-
+DSA.propTypes = {
+  questions: PropTypes.array.isRequired,
+  toggleDone: PropTypes.func.isRequired
+};
 export default DSA;
